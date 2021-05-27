@@ -1,0 +1,58 @@
+p {
+    padding-left: 0,5 em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#present {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+#textParagraph {
+    box-shadow: -10px 8px 15px rgba(0, 0, 0, 0.1);
+    border-style: 1px solid #ccc;
+    border-radius: 16px;
+    border-left: solid #28a745;
+}
+
+label{
+    box-shadow: -10px 8px 15px rgba(0, 0, 0, 0.1);
+    border-style: 1px solid #ccc;
+    border-radius: 16px;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    border-left: solid #28a745;
+}
+
+table{
+    width: 50%;
+    border-collapse: collapse;
+    box-shadow: -10px 8px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 3em;
+}
+
+td, th{
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+}
+
+i, #reset{
+    cursor: pointer;
+}
+
+#exempleImg{
+    width: 50%;
+}
+
+#codepen{
+    display: none;
+    width: 100%;
+}
+
+#downSpace{
+    width: 50%;
+    height: 500px;
+    display: block;
+    color: black;
+}
