@@ -1,22 +1,31 @@
-
-const button = document.querySelector('button');
+const asyncButton = document.querySelector('#async');
+const syncButton = document.querySelector('#sync');
+const stopButton = document.querySelector('#stop');
+const syncRow1 = document.querySelector('#sync1')
+const syncRow2 = document.querySelector('#sync2')
+const asyncRow1 = document.querySelector('#async1')
+const asyncRow2 = document.querySelector('#async2')
 
 const posts = [
-  {title: 'Post One', body:'this is post One'},
-  {title: 'Post Two', body:'this is post Two'}
+  { title: 'Post One', body: 'this is post One' },
+  { title: 'Post Two', body: 'this is post Two' }
 ];
-console.log(posts);
+
+const syncPosts = [
+  { title: 'Post One', body: 'this is post One' },
+  { title: 'Post Two', body: 'this is post Two' }
+]
+
+
 
 const getPosts = () => {
   setTimeout(() => {
-    let output ='';
+    let output = '';
     posts.forEach((post) => {
-      output+= `<li>${post.title}</li>`;
+      output += `<li>${post.title}</li>`;
     });
-    const top = document.querySelector('#top')
-    const divHolder = document.createElement('div')
-    top.appendChild(divHolder);
-    divHolder.innerHTML = output
+    asyncRow1.style.backgroundColor = 'green'
+    asyncRow1.innerHTML = output
   }, 1000);
 }
 
@@ -27,7 +36,48 @@ const createPost = (post, callback) => {
   }, 2000);
 }
 
-button.addEventListener('click', () => {
-  createPost({title: 'Post Three', body: 'This is Post Three'}, getPosts);
+let output = 0;
+
+const syncGetPost = () => {
+  
+  setTimeout(() => {
+    let output = '';
+    syncPosts.forEach((post) => {
+      output += `<li>${post.title}</li>`;
+    });
+    syncRow1.innerHTML = output
+  }, 1000)
+}
+
+let syncput = 0;
+const blockingCounter = () => {
+  for(let i = 0; i< 1e6; i++){
+    syncput += i;
+    syncRow2.innerHTML = syncput;
+  }
+  
+}
+
+
+
+
+asyncButton.addEventListener('click', () => {
+  if (!asyncRow1.innerText) {
+    return createPost({ title: 'Post Three', body: 'This is Post Three' }, getPosts);
+  }
+    const counter = setInterval(() =>{
+    output +=1
+    asyncRow2.style.backgroundColor = 'yellow'
+    asyncRow2.innerHTML = output
+    if(output=== 1000) {
+      clearInterval(counter);
+    }
+   },10);
 })
 
+syncButton.addEventListener('click', () => {
+  if(!syncRow1.innerText) {
+    return syncGetPost();
+  }
+  blockingCounter();
+})
