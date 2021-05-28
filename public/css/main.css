@@ -62,3 +62,13 @@ ul li{
 ul{
     margin-top: 10px;
 }
+
+#prosCons{
+  box-shadow: -10px 8px 15px rgba(0, 0, 0, 0.1);
+  border-style: 1px solid #ccc;
+  border-radius: 16px;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  border-left: solid #dc3545;
+  font-size: 1.5rem;
+}
