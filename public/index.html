@@ -8,19 +8,20 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <title>Ninja Devs</title>
   </head>
   <body>    
 
 
-    <nav class="navbar navbar-expand-lg  bg-light">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
        
        
       <a class="navbar-brand" href="#"><img src="./images/ninjaLogo.png" height="70px"></a>
        
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="btn btn-outline-danger ml-2" href="#adam">Adam</a>
+            <a class="btn btn-outline-danger ml-2" href="#mainhead">Adam</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-danger ml-2" href="#oscar">Oscar</a>
@@ -36,13 +37,24 @@
       
       </nav>
     
- <div class="container">
+ <div class="container mainhead" id="mainhead">
      <div class="mt-5 mb-5">
         <h1>Callbacks</h1>
      </div>
      <div class="mt-5">
 
-    <div id="adam"></div>
+    <div id="adam">
+      <div class="container">
+        <label>The ninja devs are presenting today the first, oldest way to do it</label>
+        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xqQ332cg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ltnifh5z7pkeeb2jzt5p.png" alt="" srcset="">
+        <br>
+        <label>JavaScript is synchronous with a single Call stack.</label>
+        <img src="https://lh3.googleusercontent.com/proxy/iHjGUUCN6k5GoZWisYr2VJzAvRoKDv76h4UfEahHce95CBl2sUrs82LkV2hBKxSHFbQs9fsFxS6xXVjYdfxMAj74pVxv0YlGj6415XVtP2-iERClvMU9two7pHJ_fy7kqmaIQ4JetFOY3Yfw8wws3_Liyowm64Dqb6xbfGF_naq0WCXk3w" alt="" srcset="">
+        <br>
+        <label for="">Callback is a function passed into another function as an argument to be executed.</label>
+        <img src="./images/callBacksExemp.png" alt="Callbacks" srcset="">
+      </div>
+    </div>
 
     <div id="oscar">
       <div class="container">
@@ -54,7 +66,8 @@
 
     <div id="anna"></div>
 
-    <div id="rawa"></div>
+    <div id="rawa">
+    </div>
 
   
 
@@ -66,5 +79,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/callbacks.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>
