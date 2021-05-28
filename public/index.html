@@ -63,9 +63,59 @@
         </div>
       </div>
 
-      <div id="oscar">
+      <div class ="container" id="oscar">
+        <div> 
+          <h3>Callback to Hell</h3>
+          <h4>Callbacks in the wild</h4>
+            <p>One of the ways to know that you are encountering a callback <br> is that you will see a function being passed as a parameter to another function.<br>
+              a great example of this is the addeventlistener which will be demonstrated below.<br> An EventListener takes two parameters, what interaction it is <br>
+              listening for i.e. a 'click' and the second is the callback. The callback tells the listener what function to run when the event happens.
+            </p>
+          <div id="examples">
+          <label> Asynchronous Callback
+            <img src="./images/addEventListener.png" alt="">
+          </label>
+          <p>
+            The example above shows an example of how to use a callback asynchronously. The eventlistener is initialised but the callback does not trigger until later and doesn't block<br>
+            the event loop.
+          </p>
+
+          <label> Synchronous Callback
+            <img src="./images/synchronousCallback.png" width="80%" alt="">
+          </label>
+          <p>
+            The example above shows an example of how to use a callback synchronously.
+          </p>
+
+        </div>
+          
+         
+          
+        </div>
         <div class="mt-3 mx-auto text-center col-8 ">
-          <iframe src="./test.html" width="75%" height="400px"></iframe>
+          <h5>Examples of callbacks and</h5>
+          <iframe src="./test.html" width="75%" height="200px"></iframe>  
+        </div>
+        
+        <div id="prosCons">
+          <div id ="caveats"><h4>Caveats</h4>
+            <p>
+              The biggest caveat when working with callbacks is that they are <strong>not inherently Asynchronous</strong>, they can also be used <strong>synchronously</strong>.<br>
+              Another caveat is that you should pass the callback as the last parameter to a function.           
+            </p></div>
+          <h4>Pros and cons</h4> 
+          <h6>Pros</h6>
+          <ul>
+              <li>Allows you to access data which would normally be out of scope</li>
+              <li>Allows for interactivity to webpages in conjucture with addeventlistener</li>
+              <li>Allows for nonblocking code to be run</li>
+          </ul>
+            <h6>Cons</h6>
+            <ul>
+              <li>Not inherently Asynchronous</li>
+              <li>Very easy to make code unreadable when many nested callbacks are used</li>
+              <li>Callback Hell</li>
+            </ul>
         </div>
       </div>
 

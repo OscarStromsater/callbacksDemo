@@ -15,6 +15,14 @@ const syncPosts = [
   { title: 'Post One', body: 'this is post One' },
   { title: 'Post Two', body: 'this is post Two' }
 ]
+const syncPosts1 = [
+  'There are currently two posts on the server',
+  'Create your post and send it to the server',
+  'This takes some time',
+  'Getting all posts doesnt wait and is called as soon as post is created',
+  'Post One',
+  'Post Two'
+]
 
 
 
@@ -39,7 +47,6 @@ const createPost = (post, callback) => {
 let output = 0;
 
 const syncGetPost = () => {
-  
   setTimeout(() => {
     let output = '';
     syncPosts.forEach((post) => {
@@ -51,15 +58,12 @@ const syncGetPost = () => {
 
 let syncput = 0;
 const blockingCounter = () => {
-  for(let i = 0; i< 1e6; i++){
+  for(let i = 0; i< 4e6; i++){
     syncput += i;
     syncRow2.innerHTML = syncput;
   }
   
 }
-
-
-
 
 asyncButton.addEventListener('click', () => {
   if (!asyncRow1.innerText) {
